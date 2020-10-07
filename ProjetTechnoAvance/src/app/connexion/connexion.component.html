@@ -1,0 +1,12 @@
+Login page: <br/>
+
+<form (ngSubmit)="onSubmit()" #inscriptionForm="ngForm">
+    <label> Email </label>
+    <input type="text" class="form-control" required [(ngModel)]="user['email']" name="email" />
+
+    <label> Password </label>
+    <input type="password" class="form-control" required [(ngModel)]="user['password']" name="password" />
+
+    <input type="submit" value="submit"/>
+  </form>
+  <p> {{message}} </p>

@@ -1,0 +1,10 @@
+[
+        { nom: "robe", couleur: "bleu", taille: "M", "prix": 90,categorie: "femme",type:"grandeTaille"},
+        { nom: "chaussure", couleur: "bleu", taille: "M", "prix": 55,categorie: "femme",type:"grandeTaille"},
+        { nom: "jupe", couleur: "bleu", taille: "M", "prix": 45,categorie: "femme",type:"petiteTaille"},
+        { nom: "t-shirt", couleur: "bleu", taille: "M", "prix": 34,categorie: "femme",type:"petiteTaille"},
+        { nom: "chaussette", couleur: "bleu", taille: "M", "prix": 78,categorie: "homme",type:"grandeTaille"},
+        { nom: "mini-jupe", couleur: "bleu", taille: "M", "prix": 23,categorie: "enfant",type:"petiteTaille"},
+        { nom: "blouson", couleur: "bleu", taille: "M", "prix": 33,categorie: "homme",type:"grandeTaille"}
+]       
+

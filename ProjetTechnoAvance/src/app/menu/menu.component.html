@@ -1,0 +1,29 @@
+
+
+
+<nav class="navbar navbar-dark bg-dark navbar-fixed-top navbar-expand">
+    <div class="container-fluid">
+      <ul *ngIf="!(user|async)" class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link active" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link disabled" routerLink="/produits"> Produits</a><br>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" routerLink="/categories"> Categories</a>
+          </li>
+      </ul>
+      <ul *ngIf="(user|async)" class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link disabled" routerLink="/produits"> Produits</a><br>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link active" routerLink="/categories"> Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" (click)="disconnect()">Sign out {{user|async}}</a>
+          </li>
+      </ul>
+    </div>
+  </nav>

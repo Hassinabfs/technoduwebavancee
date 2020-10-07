@@ -1,0 +1,7 @@
+
+<ul>
+  <li *ngFor="let produit of produits">{{produit.nom}}
+
+  <span *ngIf="produit.stock ==0">(indisponible)</span>
+  </li>
+</ul>
