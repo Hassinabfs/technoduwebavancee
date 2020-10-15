@@ -7,20 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProduitsComponent } from './produits/produits.component';
-import { ProduitsService } from './produits.service';
+
+
 import { HttpClientModule } from '@angular/common/http';
-import { CategoriesComponent } from './categories/categories.component';
 import { TypesComponent } from './types/types.component';
 import { ConnexionComponent } from './connexion/connexion.component';
-import { AuthentificationService } from './authentification.service';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ProduitsComponent,
-    CategoriesComponent,
     TypesComponent,
+    CategoriesComponent,
     ConnexionComponent
   ],
   imports: [
@@ -29,7 +29,7 @@ import { AuthentificationService } from './authentification.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ProduitsService, AuthentificationService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

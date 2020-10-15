@@ -1,5 +1,9 @@
+
+<hr>
+
 <ul>
   <li *ngFor=" let categorie of categories ">
-    <a routerLink="/categories/types"> {{ categorie }}</a>
+    <a routerLink="/categories/:categorie"> {{ categorie }} </a>
   </li>
 </ul>
+

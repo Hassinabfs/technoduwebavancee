@@ -22,7 +22,7 @@ app.use(function ( req , res , next){
 app.get("/produits", (req, res) => {
     console.log("route: /produits");
     db.collection("produits").find().toArray((err, documents) => {
-        res.end(JSON.stringify(documents));
+        res.json(documents);
     })
   })
 app.get("/categories", (req, res) => {
@@ -31,15 +31,26 @@ app.get("/categories", (req, res) => {
       res.json(documents);
     })
   })
-  app.get("/categories/types", (req, res) => {
-    console.log("route: /categories/types");
-    db.collection("produits").distinct("type",(err, documents) => {
+ // app.get("/categories/types", (req, res) => {
+   // console.log("route: /categories/types");
+   // db.collection("produits").distinct("type",(err, documents) => {
+   //   res.json(documents);
+   //})
+  //})
+  
+  app.get("/categories/:categorie", (req, res) => {
+    console.log("route: /categories/:categorie");
+    db.collection("produits").distinct("type",{"categorie":req.params.categorie},(err, documents) => {
       res.json(documents);
     })
   })
-
-
   
+  app.get("/categories/:categorie/:type", (req, res) => {
+    console.log("route: /categories/:categorie/:type");
+    db.collection("produits").find({"type":req.params.type},{"categorie":req.params.categorie}).toArray((err, documents) => {
+      res.json(documents);
+    })
+  })
   // app.get("/search/:categories/:types", (req, res) => {
   //   console.log("route: /search/:categories/:types");
   //   db.produits.find({"categorie" : req.params.categories}
@@ -89,5 +100,5 @@ app.get("/categories", (req, res) => {
 });
 
 
-console.log("Node is connected")
+console.log("Node is connected.")
 app.listen(8888);

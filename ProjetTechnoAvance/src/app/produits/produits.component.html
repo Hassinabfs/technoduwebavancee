@@ -1,7 +1,14 @@
 
-<ul>
-  <li *ngFor="let produit of produits">{{produit.nom}}
 
-  <span *ngIf="produit.stock ==0">(indisponible)</span>
+<ul>
+  <li *ngFor="let produit of produits">
+  {{produit.nom}}
+  <img src="{{produit.image}}"/>
+  <span *ngIf="produit.stock ==0">(indisponible)</span> 
   </li>
+  <!--<img ng-src="{{produit.image}}"/>-->
+  
+  
+  <!--<img ng-src="{{produit.image}}"/>-->
+  
 </ul>
